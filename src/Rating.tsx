@@ -11,6 +11,7 @@ interface RatingProps {
   color: string;
 }
 
+
 function Rating(props: RatingProps) {
   const [hoverValue, setHoverValue] = useState(props.value);
   useEffect(() => {
