@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Rating from "./Rating";
+import Rating from "../Rating";
 
 const meta = {
   title: "Rating",
