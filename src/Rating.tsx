@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable prefer-spread */
-import { SetStateAction, useEffect, useState } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 import "./Rating.css";
 
 interface RatingProps {
@@ -9,23 +9,6 @@ interface RatingProps {
   value: number;
   setValue: React.Dispatch<SetStateAction<number>>;
   color: string;
-}
-
-function ContainerRating(props: RatingProps) {
-  const [value, setValue] = useState(0);
-
-  return (
-    <div>
-      <Rating
-        color={props.color}
-        size={props.size}
-        setValue={setValue}
-        value={value}
-      />{" "}
-      Value:
-      {value}
-    </div>
-  );
 }
 
 function Rating(props: RatingProps) {
@@ -41,7 +24,7 @@ function Rating(props: RatingProps) {
       }}
       className="container"
     >
-      {Array.apply(null, Array(props.length || 5)).map((item, key) => (
+      {Array.apply(null, Array(props.length || 5)).map((_item, key) => (
         <div
           key={key}
           style={{

@@ -1,8 +1,13 @@
 {
-  "name": "react-rating",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@siddhantmadhur/react-rating",
+  "private": false,
+  "version": "1.1.0",
   "type": "module",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
