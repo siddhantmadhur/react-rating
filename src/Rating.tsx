@@ -7,7 +7,7 @@ interface RatingProps {
   length?: number;
   size?: number;
   value: number;
-  setValue: React.Dispatch<SetStateAction<number>>;
+  setValue?: React.Dispatch<SetStateAction<number>>;
   color: string;
   readOnly?: boolean;
 }
@@ -44,9 +44,9 @@ function Rating(props: RatingProps) {
               top: 0,
               left: 0,
               width: (props.size || 24) / 2,
-              cursor: !readOnly?"pointer":""
+              cursor: !readOnly ? "pointer" : "",
             }}
-            onClick={() => props.setValue(key + 0.5)}
+            onClick={() => (props.setValue ? props.setValue(key + 0.5) : null)}
             onMouseEnter={() => {
               if (!readOnly) {
                 setHoverValue(key + 0.5);
@@ -78,16 +78,15 @@ function Rating(props: RatingProps) {
               top: 0,
               right: 0,
               width: (props.size || 24) / 2,
-              cursor: !readOnly?"pointer":""
+              cursor: !readOnly ? "pointer" : "",
             }}
-            onClick={() => props.setValue(key + 1)}
+            onClick={() => (props.setValue ? props.setValue(key + 0.5) : null)}
             onMouseEnter={() => {
               if (!readOnly) {
                 setHoverValue(key + 1);
               }
             }}
             disabled={readOnly}
-            
           >
             {" "}
             <svg
