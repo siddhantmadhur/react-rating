@@ -11,6 +11,7 @@ const meta = {
     value: 2,
     color: "#1EADB6",
     size: 64,
+    readOnly: false
   },
 } satisfies Meta<typeof Rating>;
 

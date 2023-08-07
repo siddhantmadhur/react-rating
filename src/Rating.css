@@ -4,8 +4,8 @@
 
 button {
   all: unset;
-  cursor: pointer;
 }
+
 
 .icon {
   transition-property: all;

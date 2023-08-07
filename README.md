@@ -12,6 +12,7 @@ The goal for this package is to support all features.
 |          Change state          | Yes                 | Yes          |
 | Allow any number of stars/icon | Yes                 | Yes          |
 |        Allow half-stars        | Yes                 | Yes          |
+| Read Only | Yes | Yes |
 | Allow any number of divisions | Yes                 | No           |
 |       Custom CSS Support       | Yes                 | No           |
 |       Custom SVG Support       | Yes                 | No           |

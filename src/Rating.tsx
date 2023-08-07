@@ -9,14 +9,18 @@ interface RatingProps {
   value: number;
   setValue: React.Dispatch<SetStateAction<number>>;
   color: string;
+  readOnly?: boolean;
 }
-
 
 function Rating(props: RatingProps) {
   const [hoverValue, setHoverValue] = useState(props.value);
   useEffect(() => {
-    setHoverValue(props.value);
+    if (props.readOnly) {
+      setHoverValue(props.value);
+    }
   }, [props.value]);
+
+  const readOnly = props.readOnly || false;
 
   return (
     <div
@@ -32,7 +36,7 @@ function Rating(props: RatingProps) {
             position: "relative",
             color: props.color,
           }}
-          className="icon"
+          className={!readOnly ? "icon" : ""}
         >
           <button
             style={{
@@ -40,9 +44,15 @@ function Rating(props: RatingProps) {
               top: 0,
               left: 0,
               width: (props.size || 24) / 2,
+              cursor: !readOnly?"pointer":""
             }}
             onClick={() => props.setValue(key + 0.5)}
-            onMouseEnter={() => setHoverValue(key + 0.5)}
+            onMouseEnter={() => {
+              if (!readOnly) {
+                setHoverValue(key + 0.5);
+              }
+            }}
+            disabled={readOnly}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +78,16 @@ function Rating(props: RatingProps) {
               top: 0,
               right: 0,
               width: (props.size || 24) / 2,
+              cursor: !readOnly?"pointer":""
             }}
             onClick={() => props.setValue(key + 1)}
-            onMouseEnter={() => setHoverValue(key + 1)}
+            onMouseEnter={() => {
+              if (!readOnly) {
+                setHoverValue(key + 1);
+              }
+            }}
+            disabled={readOnly}
+            
           >
             {" "}
             <svg
