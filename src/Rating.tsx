@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable prefer-spread */
+"use client";
 import React, { SetStateAction, useEffect, useState } from "react";
 import "./Rating.css";
 
