@@ -1,7 +1,5 @@
 # React Rating - Fast MUI Replacement
-### When I was using MaterialUI's Rating component it was, alone, adding 25kb to my JavaScript bundle size. This Component is meant to replace it, with eventual, feature parity.
-
-<br />
+When I was using MaterialUI's Rating component it was, alone, adding 25kb to my JavaScript bundle size. This Component is meant to replace it, with eventual, feature parity.
 
 #### Feature Parity
 
