@@ -3,6 +3,8 @@
   "private": false,
   "version": "1.2.4",
   "type": "module",
+  "homepage": "https://github.com/SiddhantMadhur/react-rating",
+  "author": "Siddhant Madhur",
   "license": "ISC",
   "keywords": [
     "react",

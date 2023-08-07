@@ -1,14 +1,19 @@
 # React Rating - Fast MUI Replacement
+### When I was using MaterialUI's Rating component it was, alone, adding 25kb to my JavaScript bundle size. This Component is meant to replace it, with eventual, feature parity.
 
-### Made by [Siddhant Madhur](https://siddhantsoftware.com)
+<br />
 
-#### Issue:
+#### Feature Parity
 
-When I was using MaterialUI's Rating component it was, alone, adding 25kb to my JavaScript bundle size. This Component is meant to replace it, with eventual, feature parity.
+The goal for this package is to support all features.
 
-#### TODO:
 
-* [X] Change state passed to it
-* [X] Allow any number of stars/icons
-* [ ] Allow any number of divisions
-* [ ] Allow custom SVG's
+|            Feature            | MaterialUI's Rating | React Rating |
+| :------------------------------: | :-------------------- | :------------- |
+|         Unpacked Size         | 10.2 MB             | 5.98 kB      |
+|          Change state          | Yes                 | Yes          |
+| Allow any number of stars/icon | Yes                 | Yes          |
+|        Allow half-stars        | Yes                 | Yes          |
+| Allow any number of divisions | Yes                 | No           |
+|       Custom CSS Support       | Yes                 | No           |
+|       Custom SVG Support       | Yes                 | No           |
