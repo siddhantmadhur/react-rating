@@ -1,16 +1,26 @@
 {
   "name": "@siddhantmadhur/react-rating",
   "private": false,
-  "version": "1.2.0",
+  "version": "1.2.4",
   "type": "module",
   "license": "ISC",
+  "keywords": [
+    "react",
+    "rating",
+    "star",
+    "mui",
+    "material",
+    "ui",
+    "materialui",
+    "heroicon"
+  ],
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
+  "main": "dist/Rating.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && cp src/Rating.css dist/Rating.css",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
