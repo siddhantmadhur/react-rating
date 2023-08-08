@@ -4,7 +4,7 @@
 import React, { SetStateAction, useEffect, useState } from "react";
 import "./Rating.css";
 
-interface RatingProps {
+export interface RatingProps {
   length?: number;
   size?: number;
   value: number;
@@ -83,7 +83,7 @@ function Rating(props: RatingProps) {
               width: (props.size || 24) / 2,
               cursor: !readOnly ? "pointer" : "",
             }}
-            onClick={() => (props.setValue ? props.setValue(key + 0.5) : null)}
+            onClick={() => (props.setValue ? props.setValue(key + 1) : null)}
             onMouseEnter={() => {
               if (!readOnly) {
                 setHoverValue(key + 1);

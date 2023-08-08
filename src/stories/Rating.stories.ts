@@ -1,9 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Rating from "../Rating";
+
+import Container from "./Container";
 
 const meta = {
   title: "Rating",
-  component: Rating,
+  component: Container,
   parameters: {
     layout: "centered",
   },
@@ -13,7 +14,7 @@ const meta = {
     size: 64,
     readOnly: false
   },
-} satisfies Meta<typeof Rating>;
+} satisfies Meta<typeof Container>;
 
 export default meta;
 
