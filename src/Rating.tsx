@@ -11,6 +11,7 @@ export interface RatingProps {
   setValue?: React.Dispatch<SetStateAction<number>>;
   color: string;
   readOnly?: boolean;
+  className?: string;
 }
 
 function Rating(props: RatingProps) {
@@ -28,7 +29,7 @@ function Rating(props: RatingProps) {
       onMouseLeave={() => {
         setHoverValue(props.value);
       }}
-      className="container"
+      className={`container ${props.className || ""}`}
     >
       {Array.apply(null, Array(props.length || 5)).map((_item, key) => (
         <div
