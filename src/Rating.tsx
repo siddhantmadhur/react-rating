@@ -17,9 +17,7 @@ export interface RatingProps {
 function Rating(props: RatingProps) {
   const [hoverValue, setHoverValue] = useState(props.value);
   useEffect(() => {
-    if (props.readOnly) {
-      setHoverValue(props.value);
-    }
+    setHoverValue(props.value);
   }, [props.value]);
 
   const readOnly = props.readOnly || false;
