@@ -39,6 +39,7 @@ function Rating(props: RatingProps) {
           className={!readOnly ? "icon" : ""}
         >
           <button
+          type="button"
             className="star-react-rating"
             style={{
               position: "absolute",
@@ -74,6 +75,7 @@ function Rating(props: RatingProps) {
             </svg>
           </button>
           <button
+          type="button"
             className="star-react-rating"
             style={{
               position: "absolute",
